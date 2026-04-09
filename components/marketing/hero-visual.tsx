@@ -1,0 +1,89 @@
+"use client";
+
+import { motion, useReducedMotion } from "framer-motion";
+
+const lanes = [
+  { label: "Report Review", time: "47 min saved", width: "78%" },
+  { label: "Client Deck", time: "Brand-ready", width: "61%" },
+  { label: "Project Update", time: "Sent faster", width: "72%" }
+];
+
+export function HeroVisual() {
+  const prefersReducedMotion = useReducedMotion();
+
+  return (
+    <div className="relative mx-auto w-full max-w-[560px]">
+      <div className="absolute -left-10 top-8 h-32 w-32 rounded-full bg-papaya/16 blur-3xl" />
+      <div className="absolute -right-8 bottom-10 h-28 w-28 rounded-full bg-charcoal/10 blur-3xl" />
+      <motion.div
+        initial={prefersReducedMotion ? false : { opacity: 0, y: 24 }}
+        animate={prefersReducedMotion ? {} : { opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+        className="relative overflow-hidden rounded-[32px] border border-charcoal/10 bg-white p-5 shadow-premium"
+      >
+        <div className="rounded-[28px] border border-charcoal/8 bg-[linear-gradient(180deg,#111214_0%,#18181b_100%)] p-6 text-white">
+          <div className="flex items-center justify-between gap-4">
+            <div>
+              <p className="text-xs uppercase tracking-[0.22em] text-white/45">Workflow snapshot</p>
+              <h3 className="mt-2 font-display text-2xl font-bold tracking-[-0.04em]">
+                Reclaim pipeline
+              </h3>
+            </div>
+            <div className="rounded-full border border-white/10 bg-white/6 px-3 py-1 text-xs font-medium text-white/72">
+              Live throughput
+            </div>
+          </div>
+
+          <div className="mt-8 space-y-4">
+            {lanes.map((lane, index) => (
+              <motion.div
+                key={lane.label}
+                initial={prefersReducedMotion ? false : { opacity: 0, x: 18 }}
+                animate={prefersReducedMotion ? {} : { opacity: 1, x: 0 }}
+                transition={{ delay: 0.15 + index * 0.12, duration: 0.55 }}
+                className="rounded-3xl border border-white/8 bg-white/5 p-4"
+              >
+                <div className="flex items-center justify-between text-sm">
+                  <span className="font-medium text-white">{lane.label}</span>
+                  <span className="text-white/58">{lane.time}</span>
+                </div>
+                <div className="mt-4 h-2 overflow-hidden rounded-full bg-white/10">
+                  <motion.div
+                    initial={prefersReducedMotion ? false : { width: 0 }}
+                    animate={prefersReducedMotion ? { width: lane.width } : { width: lane.width }}
+                    transition={{ delay: 0.35 + index * 0.12, duration: 0.8, ease: "easeOut" }}
+                    className="h-full rounded-full bg-[linear-gradient(90deg,#FF6A00_0%,#FF9A52_100%)]"
+                  />
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="mt-8 grid gap-4 sm:grid-cols-[1.2fr_0.8fr]">
+            <div className="rounded-[24px] border border-white/8 bg-white/4 p-4">
+              <p className="text-xs uppercase tracking-[0.18em] text-white/42">Input</p>
+              <p className="mt-3 text-sm leading-6 text-white/78">
+                Technical report, notes, previous decks, and client updates.
+              </p>
+            </div>
+            <div className="rounded-[24px] border border-papaya/30 bg-papaya/14 p-4">
+              <p className="text-xs uppercase tracking-[0.18em] text-papaya">Output</p>
+              <p className="mt-3 text-sm leading-6 text-white">
+                Structured summary, deck draft, and polished weekly update.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <motion.div
+          initial={prefersReducedMotion ? false : { opacity: 0, y: 12 }}
+          animate={prefersReducedMotion ? {} : { opacity: 1, y: 0 }}
+          transition={{ delay: 0.65, duration: 0.5 }}
+          className="absolute bottom-6 left-6 rounded-full border border-charcoal/10 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-charcoal shadow-card"
+        >
+          More delivery. Less admin.
+        </motion.div>
+      </motion.div>
+    </div>
+  );
+}
