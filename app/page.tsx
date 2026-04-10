@@ -1,3 +1,4 @@
+import { AboutUsSection } from "@/components/marketing/about-us-section";
 import { CtaSection } from "@/components/marketing/cta-section";
 import { FeaturesSection } from "@/components/marketing/features-section";
 import { Footer } from "@/components/marketing/footer";
@@ -20,6 +21,7 @@ export default function Home() {
       <FeaturesSection />
       <HowItWorksSection />
       <RoiSection />
+      <AboutUsSection />
       <CtaSection />
       <Footer />
     </main>
