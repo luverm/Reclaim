@@ -13,7 +13,7 @@ export const siteContent = {
     eyebrow: "Built for engineering teams",
     title: "Less busywork. More billable hours.",
     description:
-      "Reclaim helps engineering firms save time on reports, presentations, and project updates so technical teams can focus on client work instead of repetitive document-heavy tasks.",
+      "Reclaim. helps engineering firms save time on reports, presentations, and project updates so technical teams can focus on client work instead of repetitive document-heavy tasks.",
     primaryCta: { label: "Book a demo", href: "#book-demo" },
     secondaryCta: { label: "See how it works", href: "#how-it-works" },
     proofPoints: [
@@ -37,7 +37,7 @@ export const siteContent = {
     eyebrow: "The result",
     title: "Sharper output with more capacity back in the week.",
     description:
-      "Reclaim reduces the drag around documentation and communication so firms can move faster without sacrificing consistency.",
+      "Reclaim. reduces the drag around documentation and communication so firms can move faster without sacrificing consistency.",
     items: [
       {
         title: "Faster report reviews",
@@ -92,7 +92,7 @@ export const siteContent = {
       },
       {
         step: "02",
-        title: "Reclaim structures and simplifies it",
+        title: "Reclaim. structures and simplifies it",
         description: "The platform extracts the signal, organizes the content, and prepares it for the task at hand."
       },
       {
@@ -113,7 +113,7 @@ export const siteContent = {
     ]
   },
   cta: {
-    title: "Reclaim more billable hours.",
+    title: "Reclaim. more billable hours.",
     description:
       "Show your team how to cut document-heavy busywork without changing how engineering work gets done.",
     button: { label: "Book a demo", href: "#book-demo" }
