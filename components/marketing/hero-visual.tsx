@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
+import { TrendingUp } from "lucide-react";
 
 const lanes = [
   { label: "Report Review", time: "47 min saved", width: "78%" },
@@ -12,7 +13,7 @@ export function HeroVisual() {
   const prefersReducedMotion = useReducedMotion();
 
   return (
-    <div className="relative mx-auto w-full max-w-[560px]">
+    <div className="relative mx-auto w-full max-w-[560px] px-3 pb-14 sm:px-0 sm:pb-8">
       <motion.div
         animate={prefersReducedMotion ? {} : { y: [-10, 10, -10] }}
         transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
@@ -26,16 +27,17 @@ export function HeroVisual() {
       <motion.div
         animate={prefersReducedMotion ? {} : { y: [0, -8, 0] }}
         transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute -right-6 top-12 z-10 rounded-full border border-white/12 bg-white px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-charcoal shadow-card"
+        className="absolute right-2 top-10 z-10 rounded-full border border-white/12 bg-white px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-charcoal shadow-card sm:-right-6 sm:top-12"
       >
         Billable-first
       </motion.div>
       <motion.div
         animate={prefersReducedMotion ? {} : { y: [0, 8, 0] }}
         transition={{ duration: 6.2, repeat: Infinity, ease: "easeInOut", delay: 0.4 }}
-        className="absolute -left-4 bottom-16 z-10 rounded-full border border-papaya/20 bg-[#fff4eb] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-papaya shadow-card"
+        className="absolute -left-2 top-[19.5rem] z-10 inline-flex items-center gap-2 rounded-full border border-papaya/20 bg-[#fff4eb] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-papaya shadow-card sm:-left-4 sm:top-[20.5rem]"
       >
-        Output speed
+        <TrendingUp className="size-3.5 stroke-[2.25]" />
+        <span>Output speed</span>
       </motion.div>
       <motion.div
         initial={prefersReducedMotion ? false : { opacity: 0, y: 24 }}
@@ -96,16 +98,16 @@ export function HeroVisual() {
               </p>
             </div>
           </div>
-        </div>
 
-        <motion.div
-          initial={prefersReducedMotion ? false : { opacity: 0, y: 12 }}
-          animate={prefersReducedMotion ? {} : { opacity: 1, y: 0 }}
-          transition={{ delay: 0.65, duration: 0.5 }}
-          className="absolute bottom-6 left-6 rounded-full border border-charcoal/10 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-charcoal shadow-card"
-        >
-          More delivery. Less admin.
-        </motion.div>
+          <div className="mt-5 flex flex-wrap items-center gap-3">
+            <div className="rounded-full border border-papaya/18 bg-papaya/10 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.22em] text-papaya">
+              Delivery signal
+            </div>
+            <p className="text-sm leading-6 text-white/68">
+              Turn dense technical input into client-ready output without dragging senior teams into admin work.
+            </p>
+          </div>
+        </div>
       </motion.div>
     </div>
   );
