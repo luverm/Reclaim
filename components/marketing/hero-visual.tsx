@@ -13,14 +13,37 @@ export function HeroVisual() {
 
   return (
     <div className="relative mx-auto w-full max-w-[560px]">
-      <div className="absolute -left-10 top-8 h-32 w-32 rounded-full bg-papaya/16 blur-3xl" />
-      <div className="absolute -right-8 bottom-10 h-28 w-28 rounded-full bg-charcoal/10 blur-3xl" />
+      <motion.div
+        animate={prefersReducedMotion ? {} : { y: [-10, 10, -10] }}
+        transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute -left-10 top-8 h-32 w-32 rounded-full bg-papaya/16 blur-3xl"
+      />
+      <motion.div
+        animate={prefersReducedMotion ? {} : { y: [10, -12, 10] }}
+        transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute -right-8 bottom-10 h-28 w-28 rounded-full bg-charcoal/10 blur-3xl"
+      />
+      <motion.div
+        animate={prefersReducedMotion ? {} : { y: [0, -8, 0] }}
+        transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute -right-6 top-12 z-10 rounded-full border border-white/12 bg-white px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-charcoal shadow-card"
+      >
+        Billable-first
+      </motion.div>
+      <motion.div
+        animate={prefersReducedMotion ? {} : { y: [0, 8, 0] }}
+        transition={{ duration: 6.2, repeat: Infinity, ease: "easeInOut", delay: 0.4 }}
+        className="absolute -left-4 bottom-16 z-10 rounded-full border border-papaya/20 bg-[#fff4eb] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-papaya shadow-card"
+      >
+        Output speed
+      </motion.div>
       <motion.div
         initial={prefersReducedMotion ? false : { opacity: 0, y: 24 }}
         animate={prefersReducedMotion ? {} : { opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        className="relative overflow-hidden rounded-[32px] border border-charcoal/10 bg-white p-5 shadow-premium"
+        className="relative overflow-hidden rounded-[32px] border border-white/14 bg-white p-5 shadow-premium"
       >
+        <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,106,0,0.08),transparent_28%,rgba(28,28,30,0.05)_78%,transparent)]" />
         <div className="rounded-[28px] border border-charcoal/8 bg-[linear-gradient(180deg,#111214_0%,#18181b_100%)] p-6 text-white">
           <div className="flex items-center justify-between gap-4">
             <div>
@@ -41,7 +64,7 @@ export function HeroVisual() {
                 initial={prefersReducedMotion ? false : { opacity: 0, x: 18 }}
                 animate={prefersReducedMotion ? {} : { opacity: 1, x: 0 }}
                 transition={{ delay: 0.15 + index * 0.12, duration: 0.55 }}
-                className="rounded-3xl border border-white/8 bg-white/5 p-4"
+                className="rounded-3xl border border-white/8 bg-white/5 p-4 backdrop-blur-sm"
               >
                 <div className="flex items-center justify-between text-sm">
                   <span className="font-medium text-white">{lane.label}</span>
@@ -60,7 +83,7 @@ export function HeroVisual() {
           </div>
 
           <div className="mt-8 grid gap-4 sm:grid-cols-[1.2fr_0.8fr]">
-            <div className="rounded-[24px] border border-white/8 bg-white/4 p-4">
+            <div className="rounded-[24px] border border-white/8 bg-white/4 p-4 backdrop-blur-sm">
               <p className="text-xs uppercase tracking-[0.18em] text-white/42">Input</p>
               <p className="mt-3 text-sm leading-6 text-white/78">
                 Technical report, notes, previous decks, and client updates.

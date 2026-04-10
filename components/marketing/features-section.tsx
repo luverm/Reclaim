@@ -19,7 +19,7 @@ export function FeaturesSection() {
       <div className="mt-14 grid gap-5 lg:grid-cols-2">
         {features.items.map((feature, index) => (
           <Reveal key={feature.title} delay={index * 0.08}>
-            <div className="group flex h-full flex-col justify-between rounded-[30px] border border-white/10 bg-white p-7 text-charcoal shadow-card">
+            <div className="group flex h-full flex-col justify-between rounded-[30px] border border-white/10 bg-white p-7 text-charcoal shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:shadow-premium">
               <div>
                 <div className="inline-flex rounded-full border border-papaya/16 bg-papaya/8 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-papaya">
                   Feature {index + 1}

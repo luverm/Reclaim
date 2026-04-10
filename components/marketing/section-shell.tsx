@@ -14,6 +14,7 @@ export function SectionShell({ id, className, children }: SectionShellProps) {
       id={id}
       className={cn("relative mx-auto w-full max-w-7xl px-6 py-24 sm:px-8 lg:px-10 lg:py-32", className)}
     >
+      <div className="pointer-events-none absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       {children}
     </section>
   );

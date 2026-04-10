@@ -15,7 +15,7 @@ export function RoiSection() {
         <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {roi.metrics.map((metric, index) => (
             <Reveal key={metric.value} delay={index * 0.08}>
-              <div className="rounded-[28px] border border-charcoal/8 bg-white p-6">
+              <div className="rounded-[28px] border border-charcoal/8 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-card">
                 <p className="font-display text-3xl font-bold tracking-[-0.05em] text-charcoal">
                   {metric.value}
                 </p>

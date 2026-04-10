@@ -18,7 +18,7 @@ export function Logo({
   priority = false
 }: LogoProps) {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-  const logoSrc = `${basePath}/reclaim-logo.svg`;
+  const logoSrc = `${basePath}/reclaim-logo.png`;
 
   const content = (
     <div
@@ -31,10 +31,10 @@ export function Logo({
       <img
         src={logoSrc}
         alt="Reclaim"
-        width={180}
-        height={40}
+        width={260}
+        height={58}
         fetchPriority={priority ? "high" : undefined}
-        className={cn("h-auto w-[150px] sm:w-[170px]", imageClassName)}
+        className={cn("h-auto w-[158px] sm:w-[182px]", imageClassName)}
       />
     </div>
   );

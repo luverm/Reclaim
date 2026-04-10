@@ -20,7 +20,7 @@ export function ProblemSection() {
         <div className="grid gap-4">
           {problem.painPoints.map((point, index) => (
             <Reveal key={point} delay={index * 0.08}>
-              <div className="group rounded-[28px] border border-white/10 bg-white p-6 shadow-card transition-transform duration-300 hover:-translate-y-1">
+              <div className="group rounded-[28px] border border-white/10 bg-white p-6 shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:shadow-premium">
                 <div className="flex items-start justify-between gap-6">
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-[0.2em] text-papaya">
