@@ -16,7 +16,7 @@ export function SiteTrendBackground() {
   const arrowOpacity = useTransform(scrollYProgress, [0, 0.2, 1], [0.24, 0.4, 0.18]);
 
   return (
-    <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+    <div className="pointer-events-none absolute inset-x-0 bottom-0 top-[52rem] overflow-hidden lg:top-[48rem]" aria-hidden="true">
       <motion.div style={{ y: lineShift }} className="absolute inset-0">
         <svg className="h-full w-full" viewBox="0 0 1440 3000" preserveAspectRatio="none" fill="none">
           <defs>
