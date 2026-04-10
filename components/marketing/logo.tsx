@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 import { cn } from "@/lib/utils";
@@ -18,6 +17,9 @@ export function Logo({
   darkSurface = false,
   priority = false
 }: LogoProps) {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+  const logoSrc = `${basePath}/reclaim-logo.svg`;
+
   const content = (
     <div
       className={cn(
@@ -26,12 +28,12 @@ export function Logo({
         className
       )}
     >
-      <Image
-        src="/reclaim-logo.svg"
+      <img
+        src={logoSrc}
         alt="Reclaim"
         width={180}
         height={40}
-        priority={priority}
+        fetchPriority={priority ? "high" : undefined}
         className={cn("h-auto w-[150px] sm:w-[170px]", imageClassName)}
       />
     </div>
