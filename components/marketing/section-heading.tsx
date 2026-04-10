@@ -19,10 +19,10 @@ export function SectionHeading({
 
   return (
     <div className={`max-w-3xl ${alignment}`}>
-      <div className="mb-5 inline-flex rounded-full border border-papaya/15 bg-papaya/8 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-papaya">
+      <div className="mb-4 inline-flex rounded-full border border-papaya/15 bg-papaya/8 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-papaya sm:mb-5 sm:px-4 sm:py-2 sm:text-xs">
         {eyebrow}
       </div>
-      <h2 className={`font-display text-3xl font-bold tracking-[-0.04em] sm:text-4xl lg:text-5xl ${titleColor}`}>
+      <h2 className={`font-display text-2xl font-bold tracking-[-0.04em] sm:text-3xl md:text-4xl lg:text-5xl ${titleColor}`}>
         {title}
       </h2>
       {description ? (

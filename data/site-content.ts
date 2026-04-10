@@ -5,7 +5,8 @@ export const siteContent = {
       { label: "Outcomes", href: "#outcomes" },
       { label: "Features", href: "#features" },
       { label: "How it works", href: "#how-it-works" },
-      { label: "ROI", href: "#roi" }
+      { label: "ROI", href: "#roi" },
+      { label: "About us", href: "#about-us" }
     ],
     primaryCta: { label: "Book a demo", href: "#book-demo" }
   },
@@ -112,6 +113,26 @@ export const siteContent = {
       { value: "More consistent output", label: "Raise quality and formatting consistency across every project touchpoint." }
     ]
   },
+  aboutUs: {
+    eyebrow: "About us",
+    title: "Built by engineers, for engineers.",
+    description:
+      "Reclaim. was founded by a team that spent years inside engineering consultancies watching senior talent burn hours on slide decks, report rewrites, and status updates. We built the tool we wished we had.",
+    values: [
+      {
+        title: "Engineering-first",
+        description: "We understand technical work because we've done it. Every feature is designed around real engineering workflows, not generic productivity."
+      },
+      {
+        title: "Output over activity",
+        description: "We measure success by the quality of what your team ships, not how many buttons they click. Less noise, more signal."
+      },
+      {
+        title: "Consistency at scale",
+        description: "From a five-person studio to a 500-person consultancy, every document should look and read like it came from the same firm."
+      }
+    ]
+  },
   cta: {
     title: "Reclaim. more billable hours.",
     description:
@@ -124,6 +145,7 @@ export const siteContent = {
     links: [
       { label: "Features", href: "#features" },
       { label: "How it works", href: "#how-it-works" },
+      { label: "About us", href: "#about-us" },
       { label: "Book a demo", href: "#book-demo" }
     ]
   }

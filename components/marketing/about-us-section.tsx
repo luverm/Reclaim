@@ -3,26 +3,23 @@ import { Reveal } from "@/components/marketing/reveal";
 import { SectionHeading } from "@/components/marketing/section-heading";
 import { SectionShell } from "@/components/marketing/section-shell";
 
-export function OutcomeSection() {
-  const { outcomes } = siteContent;
+export function AboutUsSection() {
+  const { aboutUs } = siteContent;
 
   return (
-    <SectionShell id="outcomes">
+    <SectionShell id="about-us">
       <Reveal>
         <SectionHeading
-          eyebrow={outcomes.eyebrow}
-          title={outcomes.title}
-          description={outcomes.description}
+          eyebrow={aboutUs.eyebrow}
+          title={aboutUs.title}
+          description={aboutUs.description}
           theme="dark"
         />
       </Reveal>
-      <div className="mt-14 grid gap-5 md:grid-cols-2">
-        {outcomes.items.map((item, index) => (
+      <div className="mt-14 grid gap-5 md:grid-cols-3">
+        {aboutUs.values.map((item, index) => (
           <Reveal key={item.title} delay={index * 0.08}>
             <div className="h-full rounded-[20px] border border-white/10 bg-[linear-gradient(180deg,#ffffff_0%,#faf7f4_100%)] p-5 shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:shadow-premium sm:rounded-[30px] sm:p-7">
-              <div className="mb-5 inline-flex rounded-full border border-papaya/16 bg-papaya/8 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-papaya">
-                Outcome {index + 1}
-              </div>
               <h3 className="font-display text-xl font-bold tracking-[-0.04em] text-charcoal sm:text-2xl">
                 {item.title}
               </h3>

@@ -18,10 +18,10 @@ export function HeroSection() {
             <div className="inline-flex rounded-full border border-white/10 bg-white/6 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-white/80 shadow-sm">
               {hero.eyebrow}
             </div>
-            <h1 className="mt-8 font-display text-5xl font-bold leading-[0.95] tracking-[-0.06em] text-white sm:text-6xl lg:text-7xl">
+            <h1 className="mt-6 font-display text-[2.25rem] font-bold leading-[0.95] tracking-[-0.06em] text-white sm:mt-8 sm:text-5xl md:text-6xl lg:text-7xl">
               {hero.title}
             </h1>
-            <p className="mt-8 max-w-xl text-lg leading-8 text-white/72 sm:text-xl">
+            <p className="mt-6 max-w-xl text-base leading-7 text-white/72 sm:mt-8 sm:text-lg sm:leading-8 lg:text-xl">
               {hero.description}
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
