@@ -13,7 +13,7 @@ export function HeroVisual() {
   const prefersReducedMotion = useReducedMotion();
 
   return (
-    <div className="relative mx-auto w-full max-w-[560px] px-3 pb-14 sm:px-0 sm:pb-8">
+    <div className="relative mx-auto w-full max-w-[560px] px-3 pt-8 pb-20 sm:px-0 sm:pt-6 sm:pb-12">
       <motion.div
         animate={prefersReducedMotion ? {} : { y: [-10, 10, -10] }}
         transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
@@ -27,14 +27,14 @@ export function HeroVisual() {
       <motion.div
         animate={prefersReducedMotion ? {} : { y: [0, -8, 0] }}
         transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute right-2 top-10 z-10 rounded-full border border-white/12 bg-white px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-charcoal shadow-card sm:-right-6 sm:top-12"
+        className="absolute right-4 top-0 z-10 rounded-full border border-white/12 bg-white px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-charcoal shadow-card sm:right-2 sm:top-0"
       >
         Billable-first
       </motion.div>
       <motion.div
         animate={prefersReducedMotion ? {} : { y: [0, 8, 0] }}
         transition={{ duration: 6.2, repeat: Infinity, ease: "easeInOut", delay: 0.4 }}
-        className="absolute -left-2 top-[19.5rem] z-10 inline-flex items-center gap-2 rounded-full border border-papaya/20 bg-[#fff4eb] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-papaya shadow-card sm:-left-4 sm:top-[20.5rem]"
+        className="absolute left-4 bottom-2 z-10 inline-flex items-center gap-2 rounded-full border border-papaya/20 bg-[#fff4eb] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-papaya shadow-card sm:left-2 sm:bottom-0"
       >
         <TrendingUp className="size-3.5 stroke-[2.25]" />
         <span>Output speed</span>
@@ -43,10 +43,10 @@ export function HeroVisual() {
         initial={prefersReducedMotion ? false : { opacity: 0, y: 24 }}
         animate={prefersReducedMotion ? {} : { opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        className="relative overflow-hidden rounded-[32px] border border-white/14 bg-white p-5 shadow-premium"
+        className="relative overflow-visible rounded-[32px] shadow-premium"
       >
-        <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,106,0,0.08),transparent_28%,rgba(28,28,30,0.05)_78%,transparent)]" />
-        <div className="rounded-[28px] border border-charcoal/8 bg-[linear-gradient(180deg,#111214_0%,#18181b_100%)] p-6 text-white">
+        <div className="absolute inset-0 rounded-[32px] bg-[linear-gradient(135deg,rgba(255,106,0,0.08),transparent_28%,rgba(28,28,30,0.05)_78%,transparent)]" />
+        <div className="rounded-[32px] border border-white/10 bg-[linear-gradient(180deg,#111214_0%,#18181b_100%)] p-6 text-white">
           <div className="flex items-center justify-between gap-4">
             <div>
               <p className="text-xs uppercase tracking-[0.22em] text-white/45">Workflow snapshot</p>
