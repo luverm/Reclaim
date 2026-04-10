@@ -12,17 +12,17 @@ export function HeroSection() {
 
   return (
     <SectionShell className="overflow-hidden pt-14 lg:pt-20">
-      <div className="absolute inset-x-0 top-0 -z-10 h-[680px] bg-[radial-gradient(circle_at_top_left,rgba(255,106,0,0.12),transparent_34%),radial-gradient(circle_at_top_right,rgba(28,28,30,0.08),transparent_28%),linear-gradient(180deg,#ffffff_0%,#fffaf6_55%,#ffffff_100%)]" />
+      <div className="absolute inset-x-0 top-0 -z-10 h-[680px] bg-[radial-gradient(circle_at_top_left,rgba(255,106,0,0.16),transparent_34%),radial-gradient(circle_at_top_right,rgba(255,255,255,0.06),transparent_28%),linear-gradient(180deg,#111214_0%,#0e0e0f_55%,#111214_100%)]" />
       <div className="grid items-center gap-16 lg:grid-cols-[1.05fr_0.95fr]">
         <Reveal>
           <div className="max-w-2xl">
-            <div className="inline-flex rounded-full border border-charcoal/10 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-charcoal/72 shadow-sm">
+            <div className="inline-flex rounded-full border border-white/10 bg-white/6 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-white/80 shadow-sm">
               {hero.eyebrow}
             </div>
-            <h1 className="mt-8 font-display text-5xl font-bold leading-[0.95] tracking-[-0.06em] text-soft-black sm:text-6xl lg:text-7xl">
+            <h1 className="mt-8 font-display text-5xl font-bold leading-[0.95] tracking-[-0.06em] text-white sm:text-6xl lg:text-7xl">
               {hero.title}
             </h1>
-            <p className="mt-8 max-w-xl text-lg leading-8 text-charcoal/72 sm:text-xl">
+            <p className="mt-8 max-w-xl text-lg leading-8 text-white/72 sm:text-xl">
               {hero.description}
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
@@ -39,7 +39,7 @@ export function HeroSection() {
             <div className="mt-12 grid gap-3 sm:grid-cols-3">
               {hero.proofPoints.map((item, index) => (
                 <Reveal key={item} delay={0.08 * (index + 1)}>
-                  <div className="rounded-3xl border border-charcoal/8 bg-white/90 px-4 py-4 text-sm font-medium text-charcoal shadow-card">
+                  <div className="rounded-3xl border border-white/10 bg-white px-4 py-4 text-sm font-medium text-charcoal shadow-card">
                     {item}
                   </div>
                 </Reveal>

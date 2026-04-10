@@ -10,12 +10,12 @@ export function HowItWorksSection() {
     <SectionShell id="how-it-works">
       <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
         <Reveal>
-          <SectionHeading eyebrow={howItWorks.eyebrow} title={howItWorks.title} />
+          <SectionHeading eyebrow={howItWorks.eyebrow} title={howItWorks.title} theme="dark" />
         </Reveal>
         <div className="space-y-4">
           {howItWorks.steps.map((item, index) => (
             <Reveal key={item.step} delay={index * 0.08}>
-              <div className="grid gap-6 rounded-[30px] border border-charcoal/8 bg-white p-6 shadow-card sm:grid-cols-[96px_1fr] sm:p-7">
+              <div className="grid gap-6 rounded-[30px] border border-white/10 bg-white p-6 shadow-card sm:grid-cols-[96px_1fr] sm:p-7">
                 <div className="font-display text-4xl font-bold tracking-[-0.05em] text-papaya">
                   {item.step}
                 </div>

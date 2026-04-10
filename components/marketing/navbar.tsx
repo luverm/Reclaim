@@ -8,7 +8,7 @@ export function Navbar() {
   const { nav } = siteContent;
 
   return (
-    <header className="sticky top-0 z-50 border-b border-charcoal/6 bg-white/80 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-white/8 bg-soft-black/72 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 sm:px-8 lg:px-10">
         <Logo priority />
         <nav className="hidden items-center gap-8 md:flex">
@@ -16,7 +16,7 @@ export function Navbar() {
             <Link
               key={link.label}
               href={link.href}
-              className="text-sm font-medium text-charcoal/68 transition-colors hover:text-charcoal"
+              className="text-sm font-medium text-white/66 transition-colors hover:text-white"
             >
               {link.label}
             </Link>

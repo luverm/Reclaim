@@ -11,7 +11,7 @@ export function CtaSection() {
   return (
     <SectionShell id="book-demo">
       <Reveal>
-        <div className="overflow-hidden rounded-[36px] border border-papaya/16 bg-[linear-gradient(135deg,#fff7f1_0%,#ffffff_40%,#fff4eb_100%)] px-6 py-12 shadow-card sm:px-10 sm:py-14 lg:px-14">
+        <div className="overflow-hidden rounded-[36px] border border-white/10 bg-[linear-gradient(135deg,#fff7f1_0%,#ffffff_40%,#fff4eb_100%)] px-6 py-12 shadow-card sm:px-10 sm:py-14 lg:px-14">
           <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-2xl">
               <div className="inline-flex rounded-full border border-papaya/16 bg-papaya/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-papaya">

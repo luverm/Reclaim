@@ -10,7 +10,7 @@ import { RoiSection } from "@/components/marketing/roi-section";
 
 export default function Home() {
   return (
-    <main className="bg-mesh">
+    <main className="bg-mesh text-white">
       <Navbar />
       <HeroSection />
       <ProblemSection />
