@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   output: "export",
   basePath,
-  assetPrefix: `${basePath}/`,
+  assetPrefix: basePath,
   env: {
     NEXT_PUBLIC_BASE_PATH: basePath,
   },
