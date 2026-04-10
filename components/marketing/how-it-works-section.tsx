@@ -15,12 +15,12 @@ export function HowItWorksSection() {
         <div className="space-y-4">
           {howItWorks.steps.map((item, index) => (
             <Reveal key={item.step} delay={index * 0.08}>
-              <div className="grid gap-6 rounded-[30px] border border-white/10 bg-white p-6 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-premium sm:grid-cols-[96px_1fr] sm:p-7">
-                <div className="font-display text-4xl font-bold tracking-[-0.05em] text-papaya">
+              <div className="grid gap-4 rounded-[20px] border border-white/10 bg-white p-5 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-premium sm:gap-6 sm:rounded-[30px] sm:grid-cols-[96px_1fr] sm:p-7">
+                <div className="font-display text-3xl font-bold tracking-[-0.05em] text-papaya sm:text-4xl">
                   {item.step}
                 </div>
                 <div>
-                  <h3 className="font-display text-2xl font-bold tracking-[-0.04em] text-charcoal">
+                  <h3 className="font-display text-xl font-bold tracking-[-0.04em] text-charcoal sm:text-2xl">
                     {item.title}
                   </h3>
                   <p className="mt-3 text-base leading-7 text-charcoal/70">{item.description}</p>

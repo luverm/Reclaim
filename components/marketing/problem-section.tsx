@@ -20,13 +20,13 @@ export function ProblemSection() {
         <div className="grid gap-4">
           {problem.painPoints.map((point, index) => (
             <Reveal key={point} delay={index * 0.08}>
-              <div className="group rounded-[28px] border border-white/10 bg-white p-6 shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:shadow-premium">
+              <div className="group rounded-[20px] border border-white/10 bg-white p-5 shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:shadow-premium sm:rounded-[28px] sm:p-6">
                 <div className="flex items-start justify-between gap-6">
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-[0.2em] text-papaya">
                       Pain point {index + 1}
                     </p>
-                    <h3 className="mt-3 font-display text-2xl font-bold tracking-[-0.04em] text-charcoal">
+                    <h3 className="mt-3 font-display text-xl font-bold tracking-[-0.04em] text-charcoal sm:text-2xl">
                       {point}
                     </h3>
                   </div>

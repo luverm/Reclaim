@@ -19,12 +19,12 @@ export function FeaturesSection() {
       <div className="mt-14 grid gap-5 lg:grid-cols-2">
         {features.items.map((feature, index) => (
           <Reveal key={feature.title} delay={index * 0.08}>
-            <div className="group flex h-full flex-col justify-between rounded-[30px] border border-white/10 bg-white p-7 text-charcoal shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:shadow-premium">
+            <div className="group flex h-full flex-col justify-between rounded-[20px] border border-white/10 bg-white p-5 text-charcoal shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:shadow-premium sm:rounded-[30px] sm:p-7">
               <div>
                 <div className="inline-flex rounded-full border border-papaya/16 bg-papaya/8 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-papaya">
                   Feature {index + 1}
                 </div>
-                <h3 className="mt-6 font-display text-3xl font-bold tracking-[-0.05em] text-charcoal">
+                <h3 className="mt-5 font-display text-2xl font-bold tracking-[-0.05em] text-charcoal sm:mt-6 sm:text-3xl">
                   {feature.title}
                 </h3>
                 <p className="mt-4 max-w-lg text-base leading-7 text-charcoal/72">
