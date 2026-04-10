@@ -13,7 +13,6 @@ export function SiteTrendBackground() {
   const pathLength = useTransform(scrollYProgress, [0, 0.9], [0.08, 1]);
   const glowOpacity = useTransform(scrollYProgress, [0, 0.2, 0.9], [0.18, 0.32, 0.22]);
   const lineShift = useTransform(scrollYProgress, [0, 1], prefersReducedMotion ? [0, 0] : [0, -180]);
-  const arrowLift = useTransform(scrollYProgress, [0, 1], prefersReducedMotion ? [0, 0] : [26, -14]);
   const surgeY = useTransform(scrollYProgress, [0, 1], prefersReducedMotion ? [0, 0] : [90, -130]);
   const surgeScale = useTransform(scrollYProgress, [0.2, 0.48, 0.62, 1], [0.9, 1.06, 1, 0.98]);
   const surgeOpacity = useTransform(scrollYProgress, [0.18, 0.35, 0.8], [0, 0.9, 0.32]);
@@ -89,13 +88,6 @@ export function SiteTrendBackground() {
           <circle cx="820" cy="1320" r="8" fill="#FF6A00" fillOpacity="0.12" />
           <circle cx="1070" cy="900" r="8" fill="#FF6A00" fillOpacity="0.12" />
         </svg>
-      </motion.div>
-
-      <motion.div
-        style={{ y: arrowLift }}
-        className="absolute right-[8%] top-[5.5rem] hidden rounded-full border border-papaya/18 bg-papaya/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-papaya shadow-[0_0_40px_rgba(255,106,0,0.12)] backdrop-blur-sm lg:inline-flex"
-      >
-        Upward output
       </motion.div>
 
       <motion.div
