@@ -1,7 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
 
-import logoPng from "@/public/reclaim-logo.png";
 import { cn } from "@/lib/utils";
 
 type LogoProps = {
@@ -17,30 +15,29 @@ export function Logo({
   imageClassName,
   href = "/",
   darkSurface = false,
-  priority = false
+  priority
 }: LogoProps) {
   const content = (
     <div
       className={cn(
-        "inline-flex items-center rounded-2xl px-0 py-0",
-        darkSurface && "rounded-[20px] bg-white px-4 py-3 shadow-card",
+        "inline-flex items-center",
+        darkSurface && "rounded-[20px] border border-white/10 bg-white/5 px-4 py-3 backdrop-blur-sm",
         className
       )}
     >
-      <Image
-        src={logoPng}
-        alt="Reclaim"
-        width={260}
-        height={58}
-        priority={priority}
-        unoptimized
-        className={cn("h-auto w-[158px] sm:w-[182px]", imageClassName)}
-      />
+      <span
+        className={cn(
+          "font-display text-[1.75rem] font-semibold tracking-[-0.06em] text-white sm:text-[2rem]",
+          imageClassName
+        )}
+      >
+        Reclaim<span className="text-papaya">.</span>
+      </span>
     </div>
   );
 
   return (
-    <Link href={href} aria-label="Reclaim home">
+    <Link href={href} aria-label="Reclaim home" prefetch={priority ? true : undefined}>
       {content}
     </Link>
   );
