@@ -1,15 +1,15 @@
 import type { NextConfig } from "next";
 
-const isGitHubPages = process.env.GITHUB_ACTIONS === "true";
 const repoName = "Reclaim";
+const basePath = `/${repoName}`;
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   output: "export",
-  basePath: isGitHubPages ? `/${repoName}` : "",
-  assetPrefix: isGitHubPages ? `/${repoName}/` : "",
+  basePath,
+  assetPrefix: `${basePath}/`,
   env: {
-    NEXT_PUBLIC_BASE_PATH: isGitHubPages ? `/${repoName}` : "",
+    NEXT_PUBLIC_BASE_PATH: basePath,
   },
   images: {
     unoptimized: true,
