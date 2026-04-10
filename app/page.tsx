@@ -7,10 +7,12 @@ import { Navbar } from "@/components/marketing/navbar";
 import { OutcomeSection } from "@/components/marketing/outcome-section";
 import { ProblemSection } from "@/components/marketing/problem-section";
 import { RoiSection } from "@/components/marketing/roi-section";
+import { SiteTrendBackground } from "@/components/marketing/site-trend-background";
 
 export default function Home() {
   return (
-    <main className="bg-mesh text-white">
+    <main className="relative isolate overflow-hidden bg-mesh text-white">
+      <SiteTrendBackground />
       <Navbar />
       <HeroSection />
       <ProblemSection />
