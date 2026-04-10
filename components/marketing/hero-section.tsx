@@ -12,8 +12,8 @@ export function HeroSection() {
 
   return (
     <SectionShell className="overflow-hidden pt-14 lg:pt-20">
-      <div className="absolute inset-x-0 top-0 -z-10 h-[680px] bg-[radial-gradient(circle_at_top_left,rgba(255,106,0,0.16),transparent_34%),radial-gradient(circle_at_top_right,rgba(255,255,255,0.06),transparent_28%),linear-gradient(180deg,#111214_0%,#0e0e0f_55%,#111214_100%)]" />
-      <div className="absolute inset-x-0 top-8 -z-10 h-[520px] bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:88px_88px] opacity-[0.08] [mask-image:radial-gradient(circle_at_center,black,transparent_78%)]" />
+      <div className="absolute inset-x-[-7rem] -top-16 -bottom-24 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(255,106,0,0.16),transparent_30%),radial-gradient(circle_at_top_right,rgba(255,255,255,0.06),transparent_24%),linear-gradient(180deg,#111214_0%,#0e0e0f_58%,rgba(14,14,15,0)_100%)] [mask-image:linear-gradient(180deg,black_0%,black_66%,transparent_100%)]" />
+      <div className="absolute inset-x-[-4rem] -top-2 -bottom-10 -z-10 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:88px_88px] opacity-[0.07] [mask-image:radial-gradient(circle_at_center,black,transparent_76%)]" />
       <div className="grid items-center gap-16 lg:grid-cols-[1.05fr_0.95fr]">
         <Reveal>
           <div className="max-w-2xl">
